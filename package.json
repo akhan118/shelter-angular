@@ -1,7 +1,7 @@
 {
-  "name": "Shelter-Angular",
+  "name": "shelter-angular",
   "version": "1.0.0",
-  "private": true,
+  "license": "MIT",
   "description": "Example project from an angular.io guide.",
   "scripts": {
     "ng": "ng",
@@ -11,9 +11,7 @@
     "lint": "tslint ./src/**/*.ts -t verbose",
     "e2e": "ng e2e"
   },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
+  "private": true,
   "dependencies": {
     "@angular/animations": "^5.2.4",
     "@angular/common": "^5.2.4",
