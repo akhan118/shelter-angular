@@ -14,6 +14,24 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "baseUrl": "src",
+    "paths": {
+      "@appCore/*": [
+        "app/core/*"
+      ],
+      "@appShared/*": [
+        "app/shared/*"
+      ],
+      "@appAdmin/*": [
+        "app/admin/*"
+      ],
+      "@appUser/*": [
+        "app/user/*"
+      ],
+      "@appStyles/*": [
+        "styles/*"
+      ]
+    }
   }
 }

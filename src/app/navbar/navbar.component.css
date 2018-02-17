@@ -1,0 +1,19 @@
+:host {
+  width: 100%;
+  color: #fff;
+}
+
+header {
+  height: 45px;
+}
+
+nav {
+  height: 100%;
+  background-color: green;
+}
+
+ul {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0px;
+}
