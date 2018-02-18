@@ -2,14 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { UserDetailsService } from '@appCore/services/user-details.service';
 
 @Component({
-  selector: 'sa-admin-home',
-  templateUrl: './admin-home.component.html',
-  styleUrls: ['./admin-home.component.css']
+  selector: 'sa-dashboard',
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.css']
 })
-export class AdminHomeComponent implements OnInit {
+export class DashboardComponent implements OnInit {
   navLinks: object[] = [
-    { name: 'availability', url: '/admin/home/availability' },
-    { name: 'settings', url: '/admin/home/settings' }
+    { name: 'availability', url: '/backend/dashboard/availability' },
+    { name: 'settings', url: '/backend/dashboard/settings' }
   ];
   username: string = null;
 

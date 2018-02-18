@@ -6,12 +6,12 @@ import { LoginService } from '@appCore/services/login.service';
 import { UserDetailsService } from '@appCore/services/user-details.service';
 
 @Component({
-  selector: 'sa-auth',
-  templateUrl: './auth.component.html',
-  styleUrls: ['./auth.component.css']
+  selector: 'sa-signup',
+  templateUrl: './signup.component.html',
+  styleUrls: ['./signup.component.css']
 })
-export class AuthComponent implements OnInit {
-  loginForm: FormGroup;
+export class SignupComponent implements OnInit {
+  signupForm: FormGroup;
 
   constructor(
     private fb: FormBuilder,
@@ -21,22 +21,25 @@ export class AuthComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.createLoginForm();
+    this.createSignupForm();
   }
 
-  createLoginForm(): void {
-    this.loginForm = this.fb.group({
-      userName: ['', Validators.required],
+  createSignupForm(): void {
+    this.signupForm = this.fb.group({
+      username: ['', Validators.required],
+      email: ['', Validators.required],
       password: ['', Validators.required]
     })
   }
 
   submitForm(form) {
-    this.loginService.login(form.value.userName, form.value.password)
-      .subscribe((loginResponse) => {
-        this.userDetails.accessToken = loginResponse['access_token'];
-        this.userDetails.username = loginResponse['username'];
-        this.router.navigate(['/admin/home']);
+    this.loginService.signup(form.value.username, form.value.email, form.value.password)
+      .subscribe((signupResponse) => {
+
+        this.router.navigate(['/backend/login'], {
+          queryParams: { username: form.value.username, password: form.value.password }
+        });
+
       },
       (error) => {
         console.error('Error logging into app:', error)
