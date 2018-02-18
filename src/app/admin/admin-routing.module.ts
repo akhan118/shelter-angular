@@ -3,12 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AdminComponent } from '@appAdmin/admin.component';
 import { AuthComponent } from '@appAdmin/auth/auth.component';
+import { AuthGuard } from '@appAdmin/auth/auth.guard';
 
 const adminRoutes: Routes = [
   {
     path: '', component: AdminComponent, children: [
       { path: 'auth', component: AuthComponent },
-      { path: 'home', loadChildren: '@appAdmin/home/admin-home.module#AdminHomeModule' },
+      { path: 'home', canActivate: [AuthGuard], loadChildren: '@appAdmin/home/admin-home.module#AdminHomeModule' },
       { path: '', redirectTo: 'auth', pathMatch: 'full' }
     ]
   },
