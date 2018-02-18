@@ -5,6 +5,7 @@ import { AdminRoutingModule } from '@appAdmin/admin-routing.module';
 
 import { AuthComponent } from '@appAdmin/auth/auth.component';
 import { AdminComponent } from '@appAdmin/admin.component';
+import { AuthGuard } from '@appAdmin/auth/auth.guard';
 
 @NgModule({
   imports: [
@@ -14,6 +15,9 @@ import { AdminComponent } from '@appAdmin/admin.component';
   declarations: [
     AuthComponent,
     AdminComponent
+  ],
+  providers: [
+    AuthGuard
   ]
 })
 export class AdminModule { }

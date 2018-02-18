@@ -5,7 +5,8 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from 'app/app.component';
 import { AppRoutingModule } from 'app/app-routing.module';
 
-import { AdminModule } from 'app/admin/admin.module';
+import { CoreModule } from '@appCore/core.module';
+import { AdminModule } from '@appAdmin/admin.module';
 import { UserModule } from '@appUser/user.module';
 
 import { UrlErrorComponent } from 'app/404/url-error.component';
@@ -21,10 +22,13 @@ import { SplashScreenComponent } from 'app/splash-screen/splash-screen.component
   imports: [
     BrowserModule,
     RouterModule,
+    CoreModule.forRoot(),
     AppRoutingModule,
     AdminModule,
     UserModule
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule { }
