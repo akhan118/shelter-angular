@@ -36,7 +36,7 @@ export class AuthComponent implements OnInit {
       .subscribe((loginResponse) => {
         this.userDetails.accessToken = loginResponse['access_token'];
         this.userDetails.username = loginResponse['username'];
-        this.router.navigate(['/admin/home']);
+        this.router.navigate(['/backend/dashboard']);
       },
       (error) => {
         console.error('Error logging into app:', error)
