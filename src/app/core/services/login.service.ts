@@ -18,6 +18,15 @@ export class LoginService {
     return this.http.get(loginUrl, { params });
   }
 
+  signup(username: string, email: string, password: string) {
+    let signupUrl: string = `${this.baseUrl}/signup`;
+    let params = new HttpParams();
+    params = params.append('username', username);
+    params = params.append('email', email);
+    params = params.append('password', password);
+    return this.http.get(signupUrl, { params });
+  }
+
   isLoggedIn() {
     let loggedInStatus: boolean = false;
     if (this.userDetails.accessToken) {
