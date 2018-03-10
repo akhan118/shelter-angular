@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { AdminHomeComponent } from './admin-home.component';
-import { AvailabilityComponent } from '@appAdmin/home/availability/availability.component';
-import { SettingsComponent } from '@appAdmin/home/settings/settings.component';
+import { DashboardComponent } from './dashboard.component';
+import { AvailabilityComponent } from '@appBackend/dashboard/availability/availability.component';
+import { SettingsComponent } from '@appBackend/dashboard/settings/settings.component';
 
 const homeRoutes: Routes = [
   {
-    path: '', component: AdminHomeComponent, children: [
+    path: '', component: DashboardComponent, children: [
       { path: 'availability', component: AvailabilityComponent },
       { path: 'settings', component: SettingsComponent },
       { path: '', redirectTo: 'availability', pathMatch: 'full' }
@@ -19,6 +19,4 @@ const homeRoutes: Routes = [
   imports: [RouterModule.forChild(homeRoutes)],
   exports: [RouterModule],
 })
-export class AdminHomeRoutingModule { }
-
-export const routedComponents = [AdminHomeComponent, AvailabilityComponent, SettingsComponent];
+export class DashboardRoutingModule { }

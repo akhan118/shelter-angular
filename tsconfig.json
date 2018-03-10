@@ -23,11 +23,11 @@
       "@appShared/*": [
         "app/shared/*"
       ],
-      "@appAdmin/*": [
-        "app/admin/*"
+      "@appBackend/*": [
+        "app/backend/*"
       ],
-      "@appUser/*": [
-        "app/user/*"
+      "@appFrontend/*": [
+        "app/frontend/*"
       ],
       "@appStyles/*": [
         "styles/*"
