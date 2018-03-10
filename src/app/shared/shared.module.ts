@@ -4,12 +4,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
-
 import { NavbarComponent } from 'app/navbar/navbar.component';
 import { FooterComponent } from 'app/footer/footer.component';
+import { ShelterTypePipe } from './shelter-type.pipe';
 
 @NgModule({
   declarations: [
+    ShelterTypePipe,
     NavbarComponent,
     FooterComponent
   ],
@@ -26,6 +27,7 @@ import { FooterComponent } from 'app/footer/footer.component';
     ReactiveFormsModule,
     HttpClientModule,
     RouterModule,
+    ShelterTypePipe,
     NavbarComponent,
     FooterComponent
   ]

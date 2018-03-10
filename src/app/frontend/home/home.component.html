@@ -1,3 +1,16 @@
 <sa-navbar></sa-navbar>
-content goes here
+<section class="home-content">
+  <select class="shelter-filter" [(ngModel)]="dropDownValue">
+    <option *ngFor="let type of shelterTypes" [value]="type">
+      {{type}}
+    </option>
+  </select>
+  <ul class="shelter-list">
+    <li class="shelter-item" *ngFor="let shelter of shelters | shelterType : dropDownValue">
+      <p class="shelter-name">{{shelter.name}}</p>
+      <p class="shelter-address">{{shelter.address.street}} {{shelter.address.zip}}</p>
+      <p class="shelter-types" *ngFor="let type of shelter.personType">{{type.name}}</p>
+    </li>
+  </ul>
+</section>
 <sa-footer></sa-footer>

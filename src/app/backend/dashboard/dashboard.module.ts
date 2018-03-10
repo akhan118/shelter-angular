@@ -6,6 +6,7 @@ import { DashboardRoutingModule } from '../dashboard/dashboard-routing.module';
 import { AvailabilityComponent } from '../dashboard/availability/availability.component';
 import { SettingsComponent } from '../dashboard/settings/settings.component';
 import { DashboardComponent } from '../dashboard/dashboard.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { DashboardComponent } from '../dashboard/dashboard.component';
   declarations: [
     DashboardComponent,
     AvailabilityComponent,
-    SettingsComponent
+    SettingsComponent,
+    ProfileComponent
   ]
 })
 export class DashboardModule { }
