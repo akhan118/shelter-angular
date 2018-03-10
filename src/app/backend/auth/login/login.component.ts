@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
     this.setLoginCredentials();
   }
 
-  createLoginForm(): void {
+  createLoginForm() {
     this.loginForm = this.fb.group({
       username: ['', Validators.required],
       password: ['', Validators.required]
@@ -49,7 +49,9 @@ export class LoginComponent implements OnInit {
     this.activatedRoute.queryParamMap
       .subscribe((values) => {
         let creds = values['params'];
-        this.loginForm.setValue({ username: creds['username'], password: creds['password'] });
+        if (creds['username'] && creds['password']) {
+          this.loginForm.setValue({ username: creds['username'], password: creds['password'] });
+        }
       })
   }
 
