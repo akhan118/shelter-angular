@@ -9,7 +9,15 @@ export class ShelterService {
 
   constructor(private http: HttpClient, private userDetails: UserDetailsService) { }
 
-  getShelterAvailability() {
+  getShelter() {
     return this.http.get('./assets/shelter.json');
+  }
+
+  getAllShelters() {
+    return this.http.get('./assets/shelters.json');
+  }
+
+  getShelterAvailability() {
+    return this.http.get('./assets/availability.json');
   }
 }
