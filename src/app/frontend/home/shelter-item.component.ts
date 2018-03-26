@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'sa-shelter-item',
@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./shelter-item.component.css']
 })
 export class ShelterItemComponent implements OnInit {
-
-  constructor() { }
+  @Input() ShelterData 
+   constructor() { }
 
   ngOnInit() {
+    console.log ('ShelterData', this.ShelterData);
   }
 
 }

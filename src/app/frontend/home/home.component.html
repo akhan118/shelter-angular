@@ -6,11 +6,12 @@
     </option>
   </select>
   <ul class="shelter-list">
-    <li class="shelter-item" *ngFor="let shelter of shelters | shelterType : dropDownValue">
+    <!-- <li class="shelter-item" *ngFor="let shelter of shelters | shelterType : dropDownValue">
       <p class="shelter-name">{{shelter.name}}</p>
       <p class="shelter-address">{{shelter.address.street}} {{shelter.address.zip}}</p>
       <p class="shelter-types" *ngFor="let type of shelter.personType">{{type.name}}</p>
-    </li>
+     </li> -->
+         <sa-shelter-item [ShelterData]= "shelter"*ngFor="let shelter of shelters"></sa-shelter-item> 
   </ul>
 </section>
 <sa-footer></sa-footer>
