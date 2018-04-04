@@ -1,8 +1,8 @@
 <header>
-  <nav>
-    <ul *ngIf="navItems">
-      <li *ngFor="let navItem of navItems">
-        <a [routerLink]="[navItem.url]">{{navItem.name}}</a>
+  <nav class="nav-menu">
+    <ul class="nav-items" *ngIf="navItems">
+      <li class="nav-item" *ngFor="let navItem of navItems">
+        <a class="nav-link" [routerLink]="[navItem.url]">{{navItem.name}}</a>
       </li>
     </ul>
   </nav>

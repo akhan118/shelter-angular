@@ -9,6 +9,7 @@ import { UserDetailsService } from '@appCore/services/user-details.service';
 export class DashboardComponent implements OnInit {
   navLinks: object[] = [
     { name: 'availability', url: '/backend/dashboard/availability' },
+    { name: 'profile', url: '/backend/dashboard/profile' },
     { name: 'settings', url: '/backend/dashboard/settings' }
   ];
   username: string = null;
