@@ -19,7 +19,7 @@ export class Shelter extends Object {
 })
 export class HomeComponent implements OnInit {
   shelters: Shelter[] = [];
-  shelterTypes: string[] = ['All', 'Men', 'Women', 'Youth']
+  shelterTypes: string[] = ['All', 'Men', 'Women', 'Youth', 'Family']
 
   constructor(private shelterService: ShelterService) { }
 
