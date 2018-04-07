@@ -1,5 +1,17 @@
 
 import { Component, OnInit } from '@angular/core';
+import { ShelterService } from '@appCore/services/shelter.service';
+
+export class Shelter extends Object {
+    id: number;
+    name: string;
+    EIN: number;
+    address: {
+        street: string;
+        zip: number;
+    }
+    phoneNumber: number;
+}
 
 @Component({
     selector: 'shelters',
@@ -7,7 +19,12 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class SheltersComponent implements OnInit {
-    constructor() { }
+    shelters: Shelter[] = [];
+    constructor(private _shelterService: ShelterService) { }
 
-    ngOnInit() { }
+    ngOnInit() {
+        this._shelterService.getAllShelters()
+            .subscribe((sheltersJSON: Shelter[]) => this.shelters = sheltersJSON,
+                error => console.error('Error getting shelters', error));
+    }
 }
