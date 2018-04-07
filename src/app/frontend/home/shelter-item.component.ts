@@ -7,10 +7,14 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ShelterItemComponent implements OnInit {
   @Input() ShelterData 
-   constructor() { }
+  ShowInfo: boolean = false;
+  constructor() { }
+   
 
   ngOnInit() {
     console.log ('ShelterData', this.ShelterData);
   }
-
+ ShowHide() {
+   this.ShowInfo = !this.ShowInfo;
+ }
 }
