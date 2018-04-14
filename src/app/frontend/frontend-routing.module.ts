@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { SheltersComponent} from '@appFrontend/shelters/shelters.component';
+import { SheltersComponent } from '@appFrontend/shelters/shelters.component';
 import { HomeComponent } from '@appFrontend/home/home.component';
 
 const userRoutes: Routes = [
   {
     path: '', children: [
       { path: '', component: HomeComponent },
-      {path: 'shelters', component: SheltersComponent}
+      { path: 'shelters', component: SheltersComponent },
     ]
   }
 ];
