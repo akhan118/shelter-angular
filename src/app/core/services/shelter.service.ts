@@ -6,20 +6,20 @@ import { UserDetailsService } from '@appCore/services/user-details.service';
 
 @Injectable()
 export class ShelterService {
-  private baseUrl: string = 'http://alphard.us/v1/api';
+  private baseUrl: string = 'http://www.alphard.us/v1/api/getallshelters';
   
   constructor(private http: HttpClient, private userDetails: UserDetailsService) { }
 
   getShelter() {
-    return this.http.get('./assets/shelter.json');
+    return this.http.get('./shelter');
   }
 
   getAllShelters() {
     let shelterUrl: string= this.baseUrl + '/'
-    return this.http.get('./assets/shelters.json');
+    return this.http.get(shelterUrl);
   }
 
   getShelterAvailability() {
-    return this.http.get('./assets/availability.json');
+    return this.http.get('./availability');
   }
 }
