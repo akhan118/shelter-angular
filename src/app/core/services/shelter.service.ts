@@ -6,7 +6,8 @@ import { UserDetailsService } from '@appCore/services/user-details.service';
 
 @Injectable()
 export class ShelterService {
-
+  private baseUrl: string = 'http://alphard.us/v1/api';
+  
   constructor(private http: HttpClient, private userDetails: UserDetailsService) { }
 
   getShelter() {
@@ -14,6 +15,7 @@ export class ShelterService {
   }
 
   getAllShelters() {
+    let shelterUrl: string= this.baseUrl + '/'
     return this.http.get('./assets/shelters.json');
   }
 
