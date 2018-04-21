@@ -5,11 +5,12 @@ import { FrontendRoutingModule } from '@appFrontend/frontend-routing.module';
 import { HomeComponent } from '@appFrontend/home/home.component';
 import { ShelterItemComponent } from '@appFrontend/shelter-item/shelter-item.component';
 import { SheltersComponent } from '@appFrontend/shelters/shelters.component';
+import { SheltersSignupComponent } from '@appFrontend/shelters-signup/shelters-signup.component';
 
 @NgModule({
   imports: [
     SharedModule,
-    FrontendRoutingModule
+    FrontendRoutingModule,
   ],
   exports: [
     ShelterItemComponent
@@ -17,7 +18,8 @@ import { SheltersComponent } from '@appFrontend/shelters/shelters.component';
   declarations: [
     ShelterItemComponent,
     HomeComponent,
-    SheltersComponent
+    SheltersComponent,
+    SheltersSignupComponent
   ]
 })
 export class FrontendModule { }
