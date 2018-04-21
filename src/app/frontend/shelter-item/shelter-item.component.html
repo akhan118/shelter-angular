@@ -1,0 +1,5 @@
+<li class="shelter-item" *ngIf="ShelterData">
+  <p class="shelter-name">{{ShelterData.name}}</p>
+  <p class="shelter-address">{{ShelterData.address.street}} {{ShelterData.address.zip}}</p>
+  <p class="shelter-types" *ngFor="let type of ShelterData.personType">{{type.name}}</p>
+</li>
