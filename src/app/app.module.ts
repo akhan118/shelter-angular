@@ -8,7 +8,7 @@ import { FrontendModule } from '@appFrontend/frontend.module';
 
 import { AppComponent } from 'app/app.component';
 import { UrlErrorComponent } from 'app/404/url-error.component';
-import {MatButtonModule, MatCheckboxModule ,} from '@angular/material';
+import {MatButtonModule, MatCheckboxModule } from '@angular/material';
 import {MatInputModule} from '@angular/material/input';
 import {MatTableModule} from '@angular/material/table';
 import {FormsModule} from '@angular/forms';

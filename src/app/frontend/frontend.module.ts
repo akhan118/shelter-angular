@@ -9,6 +9,11 @@ import { SheltersSignupComponent } from '@appFrontend/shelters-signup/shelters-s
 import {MatInputModule} from '@angular/material/input';
 import {MatTableModule} from '@angular/material/table';
 import {FormsModule} from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatCardModule} from '@angular/material/card';
+import {MatSelectModule} from '@angular/material/select';
+import {MatButtonModule} from '@angular/material/button';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 
 @NgModule({
@@ -16,7 +21,12 @@ import {FormsModule} from '@angular/forms';
     SharedModule,
     FrontendRoutingModule,
     FormsModule,
-    MatInputModule
+    MatInputModule,
+    MatFormFieldModule,
+    MatCardModule,
+    MatSelectModule,
+    MatButtonModule,
+    MatSnackBarModule
   ],
   exports: [
     ShelterItemComponent
