@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from 'app/app-routing.module';
 import { CoreModule } from '@appCore/core.module';
 import { BackendModule } from '@appBackend/backend.module';
@@ -21,7 +20,6 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
   ],
   imports: [
     BrowserModule,
-    RouterModule,
     CoreModule.forRoot(),
     AppRoutingModule,
     BackendModule,
@@ -31,7 +29,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatInputModule,
     MatTableModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   bootstrap: [
     AppComponent
